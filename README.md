@@ -27,7 +27,7 @@ dunst`
 
 ## Sobre o Hyprland 
 
-Nas minhas configurações estão sendo consideradas meu monitor principal do notebook. Para que o systema reconheça o monitor corretamente use o comando `hyprctl monitors` e altere nas configurações conforme necessário.
+Nas minhas configurações estou considerando o monitor principal do notebook. Para que o sistema reconheça o monitor corretamente use o comando `hyprctl monitors` e altere nas configurações conforme necessário.
 
 
 Alguns aplicativos estão configurados para abrirem em lugares X e Y específicos. Note que estou usando o monitor configurado como `monitor=eDP-1,1920x1080@60,auto,1` (scale=1).
