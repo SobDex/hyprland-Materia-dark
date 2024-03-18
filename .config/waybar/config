@@ -1,1 +1,157 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    //"spacing": 2, // Gaps between modules (4px)
+    "margin": 4,
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/upgrade", "pulseaudio", "backlight", "custom/power", "battery", "tray"],
+    
+    "hyprland/workspaces": {
+        "format": "{windows}",
+        "format-window-separator": "  ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+        "class<geany>": "",
+        "class<firefox>": "",
+        "class<thunar>": "",
+        "musicplayer": "",
+        "class<alacritty>": "",
+        "class<xfce4-terminal>": "",
+        "class<spotify>": "",
+        "class<gimp-2.10>": "",
+        "class<ristretto>": "",
+        "Youtube DLP": "",
+        "class<heroic>": "",
+        "class<PPSSPPSDL>": "",
+        "class<snes9x-gtk>": "",
+        "class<pcsx2-qt>": "",
+        "sysinfo": "",
+        "class<libreoffice-writer>": "",
+        "class<libreoffice-calc>": "",
+        "class<libreoffice-impress>": "",
+        "Color Picker": "",
+        "class<galculator>": "",
+        "class<psensor>": "",
+        "class<com.obsproject.Studio>": "",
+        "class<kdenlive>": "",
+        "Ajuda": "",
+        "class<geany> title<.*Localizar.*>": "", //para que não seja exibido diálogos do geany
+        "class<geany> title<.*Substituir.*>": "", //        "
+        "class<geany> title<.*Abrir Arquivo.*>": "", //     "
+        "Sagradas Escrituras": "",
+        "Knotes": "",
+        "class<pavucontrol>": "",
+        "class<xarchiver>": "",
+        "class<mpv>": "",
+        "Clocks": "",
+        "class<firefox> title<.*gmail.*>": "",
+        "class<firefox> title<.*google.*>": "",
+        "class<firefox> title<.*github.*>": "",
+        "class<firefox> title<.*whatsapp.*>": "",
+        "class<firefox> title<.*reddit.*>": "",
+        "class<firefox> title<.*/ X.*>": "",
+        "class<firefox> title<.*Bem Vindo.*>": "",
+        "class<firefox> title<.*twitch.*>": "",
+        "class<firefox> title<.*youtube.*>": "",
+	},
+        "persistent-workspaces": {
+             "*": 5
+        }       
+    },  
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "hyprland/window": {
+		"format": "{}",
+		"max-length": 50,
+		"separate-outputs": true	
+    },
+    "tray": {
+        "icon-size": 25,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m-%Y}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "custom/power": {
+    	"format": "{}",
+        "interval": 3600,
+        "exec": "echo ",
+        "on-click": "python3 waybar/scripts/hypr-exit.py"
+        //"on-click": "nwg-bar -i 90"
+    },
+    "custom/upgrade": {
+    	"format": "{}",
+        "interval": 3600,
+        "exec": "waybar/scripts/checkupdates.sh",
+        "on-click": "xfce4-terminal"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ""
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
 
