@@ -1,6 +1,6 @@
 # Configurações: Hyprland, waybar e wofi
 
-O padrão de cores escolhidos para as customizações são baseadas no tema gtk Materia-dark.
+O padrão de cores escolhidos para as customizações são baseadas no tema gtk Materia-dark presente no pacote `materia-gtk-theme`.
 
 
 O sistema utilizado é o Arch Linux 6.8.1-arch1-1.
