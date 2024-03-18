@@ -22,7 +22,8 @@ slurp
 cliphist
 wl-clipboard
 ttf-font-awesome
-dunst`
+dunst
+pacman-contrib`
 
 
 ## Sobre o Hyprland 
