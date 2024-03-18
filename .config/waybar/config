@@ -94,13 +94,13 @@
     	"format": "{}",
         "interval": 3600,
         "exec": "echo ",
-        "on-click": "python3 waybar/scripts/hypr-exit.py"
+        "on-click": "python3 .config/waybar/scripts/hypr-exit.py"
         //"on-click": "nwg-bar -i 90"
     },
     "custom/upgrade": {
     	"format": "{}",
         "interval": 3600,
-        "exec": "waybar/scripts/checkupdates.sh",
+        "exec": ".config/waybar/scripts/checkupdates.sh",
         "on-click": "xfce4-terminal"
     },
     "backlight": {
