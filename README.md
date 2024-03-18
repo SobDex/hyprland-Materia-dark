@@ -1,0 +1,2 @@
+## Hyprland + waybar + wofi
+
