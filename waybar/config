@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/upgrade", "pulseaudio", "backlight", "custom/config", "custom/power", "battery", "tray"],
+    "modules-right": ["custom/upgrade", "pulseaudio", "backlight", "custom/power", "battery", "tray"],
     
     "hyprland/workspaces": {
         "format": "{windows}",
