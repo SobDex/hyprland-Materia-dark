@@ -1,0 +1,266 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: linear-gradient(to top, rgba(20, 20, 20, 0.9), rgba(100, 100, 100, 0.9));
+    border-bottom: 3px solid #111;
+    color: #ffffff;
+    border-radius: 20px;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #222000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces {
+    border: 1px solid #1d2020;
+    border-radius: 20px;
+    margin: 0px;
+}
+#workspaces button {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px 7px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    margin: 4px 4px;
+    color: #fff;
+}
+
+#workspaces button:hover {
+    color: #ffffff; 
+}
+
+#workspaces button.active {
+    padding: 1 7px;
+    margin: 4px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border: 1px solid #fff;
+    color: #ffffff;
+}
+
+#workspaces button.empty {
+    color: #fff;
+}
+
+#workspaces button.urgent {
+    /*background:linear-gradient(to right, rgba(200, 130, 130, 0.8 ), rgba(250, 230, 230, 0.8));*/
+    border: 1px solid #dd7777;
+    color: #FFF;
+}
+
+
+#workspaces button.visible {
+    background:linear-gradient(to right, #90CDE8, #fff);
+    color: #222;
+}
+
+#window {
+    background-color: rgba(30, 30, 42, 0.5);
+    padding: 4px 7px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    margin: 3px 4px;
+    color: #fff;    
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+#cpu{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border-left: 1px solid #222;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 0 10px;
+    margin: 4px 0px;
+}
+
+#custom-temp,
+#memory,
+#temperature{
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    background-color: rgba(30, 30, 42, 0.5);
+    padding: 0 6px;
+    margin: 4px 0px;
+}
+
+#backlight{
+    padding: 0 10px;
+    margin: 4px 0px 4px 4px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border: 1px solid #222;
+    color: #ffffff;
+}
+
+#pulseaudio{
+    padding: 0 10px;
+    margin: 4px 4px 4px 4px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border: 1px solid #222;
+    color: #ffffff;
+}
+
+
+#custom-upgrade{
+    padding: 0 10px;
+    margin: 4px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border: 1px solid #222;
+    color: #ffffff;
+}
+
+
+#custom-launcher{
+    padding: 0 10px;
+    margin: 1px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    color: #FFF;
+    font-size: 120%;
+}
+
+#custom-launcher.hover {
+    color: #00ffff;
+}
+
+#battery{
+    padding: 0 10px;
+    margin: 4px 4px 4px 10px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border: 1px solid #222;
+    color: #ffffff;
+}
+#custom-power{
+    padding: 0 7px;
+    margin: 4px 0px 4px 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(20, 20, 20, 1.0), rgba(250, 150, 150, 1.0));
+    border: 1px solid #222;
+    color: #ffffff;
+}
+
+#clock,
+#network,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 10px;
+    margin: 4px;
+    border-radius: 20px;
+    background-color: rgba(30, 30, 42, 0.5);
+    border: 1px solid #222;
+    color: #ffffff;
+}
+
+
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    color: #222;
+    background: linear-gradient(to right, rgba(120, 200, 120, 0.8), rgba(230, 250, 230, 0.8));
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #222000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #222000;
+}
+
+
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
