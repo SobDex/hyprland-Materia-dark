@@ -4,7 +4,7 @@ O padrão de cores escolhidos para as customizações são baseadas no tema gtk 
 O sistema utilizado é o Arch Linux 6.8.1-arch1-1.
 
 Aplicações utilizadas no sistema presentes nas configurações:
-hyprpaper
+`hyprpaper
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 waybar
@@ -17,7 +17,7 @@ slurp
 cliphist
 wl-clipboard
 ttf-font-awesome
-dunst
+dunst`
 
 ## Sobre o Hyprland 
 
