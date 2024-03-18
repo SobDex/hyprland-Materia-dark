@@ -27,5 +27,5 @@ Nas minhas configurações estão sendo consideradas meu monitor principal do no
 
 Não estou usando todos os módulos disponíveis como será fácil de notar ao observar o arquivo .cofig/waybar/config. Caso deseje habilitar algum módulo na waybar modifique o arquivo conforme o necessário. Da mesma forma, o arquivo .config/waybar/style.css possuem estilos para módulos que já não mais existem na minha atual configuração.
 
-O arquivo .config/waybar/scripts/hypr-exit.py é um arquivo que uso para encerrar a sessão do Hyprland. Ele está escrito em python/tkinter portanto será necessário o pacote `tk`. Caso não deseje usá-lo crie sua própria forma de gerenciar o sistema de desligamento.
+O arquivo .config/waybar/scripts/hypr-exit.py é um arquivo que uso para encerrar a sessão do Hyprland. Ele está escrito em python/tkinter portanto será necessário o pacote `tk`. Caso não deseje usá-lo, crie sua própria forma de gerenciar o sistema de desligamento.
 
